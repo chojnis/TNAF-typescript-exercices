@@ -62,10 +62,8 @@ function logPerson(person) {
 exports.logPerson = logPerson;
 console.log("Admins:");
 exports.persons.filter(isAdmin).forEach(logPerson);
-console.log();
 console.log("Users:");
 exports.persons.filter(isUser).forEach(logPerson);
-console.log();
 console.log("Power users:");
 exports.persons.filter(isPowerUser).forEach(logPerson);
 // In case you are stuck:

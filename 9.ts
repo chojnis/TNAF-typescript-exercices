@@ -129,8 +129,6 @@ function startTheApp(callback: (error: Error | null) => void) {
       return callback(new Error(adminsResponse.error));
     }
 
-    console.log();
-
     requestUsers((usersResponse) => {
       console.log("Users:");
       if (usersResponse.status === "success") {
@@ -138,8 +136,6 @@ function startTheApp(callback: (error: Error | null) => void) {
       } else {
         return callback(new Error(usersResponse.error));
       }
-
-      console.log();
 
       requestCurrentServerTime((serverTimeResponse) => {
         console.log("Server time:");
@@ -150,8 +146,6 @@ function startTheApp(callback: (error: Error | null) => void) {
         } else {
           return callback(new Error(serverTimeResponse.error));
         }
-
-        console.log();
 
         requestCoffeeMachineQueueLength((coffeeMachineQueueLengthResponse) => {
           console.log("Coffee machine queue length:");
@@ -169,7 +163,6 @@ function startTheApp(callback: (error: Error | null) => void) {
 }
 
 startTheApp((e: Error | null) => {
-  console.log();
   if (e) {
     console.log(
       `Error: "${e.message}", but it's fine, sometimes errors are inevitable.`

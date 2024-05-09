@@ -129,20 +129,17 @@ function logPerson(person: Person) {
 async function startTheApp() {
   console.log("Admins:");
   (await api.requestAdmins()).forEach(logPerson);
-  console.log();
 
   console.log("Users:");
   (await api.requestUsers()).forEach(logPerson);
-  console.log();
 
   console.log("Server time:");
   console.log(
-    `   ${new Date(await api.requestCurrentServerTime()).toLocaleString()}`
+    `${new Date(await api.requestCurrentServerTime()).toLocaleString()}`
   );
-  console.log();
 
   console.log("Coffee machine queue length:");
-  console.log(`   ${await api.requestCoffeeMachineQueueLength()}`);
+  console.log(`${await api.requestCoffeeMachineQueueLength()}`);
 }
 
 startTheApp().then(

@@ -86,8 +86,6 @@ export const adminsOfAge23 = filterPersons(persons, "admin", { age: 23 });
 console.log("Users of age 23:");
 usersOfAge23.forEach(logPerson);
 
-console.log();
-
 console.log("Admins of age 23:");
 adminsOfAge23.forEach(logPerson);
 

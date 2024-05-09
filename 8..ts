@@ -83,12 +83,8 @@ export function logPerson(person: Person) {
 console.log("Admins:");
 persons.filter(isAdmin).forEach(logPerson);
 
-console.log();
-
 console.log("Users:");
 persons.filter(isUser).forEach(logPerson);
-
-console.log();
 
 console.log("Power users:");
 persons.filter(isPowerUser).forEach(logPerson);
