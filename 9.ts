@@ -58,7 +58,11 @@ const users: User[] = [
   { type: "user", name: "Kate Müller", age: 23, occupation: "Astronaut" },
 ];
 
-export type ApiResponse<T> = unknown;
+export type ApiResponse<T> = {
+  status: string;
+  data?: T
+  error?: string;
+};
 
 type AdminsApiResponse =
   | {

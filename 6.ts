@@ -68,8 +68,8 @@ export function logPerson(person: Person) {
 export function filterPersons(
   persons: Person[],
   personType: string,
-  criteria: unknown
-): unknown[] {
+  criteria: Partial<Person>
+): Person[] {
   return persons
     .filter((person) => person.type === personType)
     .filter((person) => {
